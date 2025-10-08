@@ -10,43 +10,58 @@ AI-powered X/Twitter post summarization and reply suggestions Chrome extension.
 - **Clean UI**: Minimal, non-intrusive interface that integrates seamlessly with X/Twitter
 - **Multiple Personas**: Human, Hardcore, and Curator response styles
 
+## 🚀 Quick Start
+
+**Want to get started fast?** → [Quick Start Guide](QUICKSTART.md)
+
+**Need detailed instructions?** → [Complete Setup Guide](SETUP.md)
+
+**Want to customize?** → [Build Instructions](BUILD.md)
+
+---
+
 ## Installation
+
+### Prerequisites
+- Python 3.8+
+- Chrome browser
+- Fireworks API key ([Get one here](https://fireworks.ai/))
 
 ### Backend Setup
 
-1. Navigate to the server directory:
+1. **Navigate to server directory:**
 ```bash
 cd server
 ```
 
-2. Create and activate virtual environment:
+2. **Create virtual environment:**
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies:
+3. **Install dependencies:**
 ```bash
 pip install fastapi uvicorn pydantic pydantic-settings structlog aiohttp langdetect redis python-multipart
 ```
 
-4. Configure environment:
+4. **Configure environment:**
 ```bash
 cp env.example .env
-# Edit .env with your API keys
+# Edit .env with your FIREWORKS_API_KEY
 ```
 
-5. Start the server:
+5. **Start the server:**
 ```bash
 python -m uvicorn app.main:app --host 0.0.0.0 --port 8787 --reload
 ```
 
 ### Extension Setup
 
-1. Open Chrome and go to `chrome://extensions/`
-2. Enable "Developer mode"
-3. Click "Load unpacked" and select the `extension` folder
-4. The PostPilot extension will be installed and ready to use
+1. **Open Chrome** and go to `chrome://extensions/`
+2. **Enable "Developer mode"**
+3. **Click "Load unpacked"** and select the `extension` folder
+4. **Done!** The PostPilot extension is now installed
 
 ## Usage
 
