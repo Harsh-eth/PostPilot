@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostPilot Settings</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="options-container">
+    <header class="options-header">
+      <h1>PostPilot Settings</h1>
+      <button id="backBtn" class="btn-secondary">← Back</button>
+    </header>
+
+    <main class="options-main">
+      <form id="settingsForm">
+        <section class="settings-section">
+          <h2>Backend Configuration</h2>
+          
+          <div class="input-group">
+            <label for="backendUrl">Backend URL</label>
+            <input 
+              type="url" 
+              id="backendUrl" 
+              placeholder="http://localhost:8787"
+              required
+            >
+            <div class="input-help">URL of your PostPilot backend server</div>
+          </div>
+
+          <div class="input-group">
+            <label for="apiKey">API Key (Optional)</label>
+            <input 
+              type="password" 
+              id="apiKey" 
+              placeholder="Leave empty for no authentication"
+            >
+            <div class="input-help">API key for backend authentication</div>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2>Persona Settings</h2>
+          
+          <div class="input-group">
+            <label for="persona">Default Persona</label>
+            <select id="persona">
+              <option value="human">Human - Concise, helpful, human-like</option>
+              <option value="hardcore">Hardcore - Direct, no-nonsense, technical</option>
+              <option value="curator">Curator - Analytical, insightful, expert</option>
+            </select>
+            <div class="input-help">Default persona for AI responses</div>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2>Privacy Settings</h2>
+          
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="privacyStripUrls">
+              <span class="checkbox-text">Strip URLs from text</span>
+            </label>
+            <div class="input-help">Remove URLs from text before sending to backend</div>
+          </div>
+
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="privacyStripMentions">
+              <span class="checkbox-text">Strip @mentions from text</span>
+            </label>
+            <div class="input-help">Remove @mentions from text before sending to backend</div>
+          </div>
+        </section>
+
+        <section class="settings-section">
+          <h2>Advanced</h2>
+          
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="debugMode">
+              <span class="checkbox-text">Debug Mode</span>
+            </label>
+            <div class="input-help">Enable console logging for debugging</div>
+          </div>
+        </section>
+
+        <!-- Actions -->
+        <section class="settings-actions">
+          <button type="submit" class="btn-primary">Save Settings</button>
+          <button type="button" id="resetBtn" class="btn-secondary">Reset to Defaults</button>
+          <button type="button" id="testConnectionBtn" class="btn-secondary">Test Connection</button>
+        </section>
+      </form>
+
+      <div id="status" class="status"></div>
+    </main>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

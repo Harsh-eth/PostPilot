@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PostPilot</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>PostPilot</h1>
+    </header>
+
+    <main class="popup-main">
+      <section class="input-section">
+        <div class="input-group">
+          <label for="textInput">Post Text <span id="charCount" class="char-count">(0/10 min)</span></label>
+          <textarea 
+            id="textInput" 
+            placeholder="Paste tweet text or enter your own... (minimum 10 characters)"
+            rows="4"
+          ></textarea>
+        </div>
+
+        <div class="input-group">
+          <label for="modeSelect">Mode</label>
+          <select id="modeSelect">
+            <option value="summarize">Summarize</option>
+            <option value="context">Context</option>
+            <option value="replies">Replies</option>
+          </select>
+        </div>
+
+        <div class="input-group" id="personaGroup" style="display: none;">
+          <label for="personaSelect">Persona</label>
+          <select id="personaSelect">
+            <option value="human">Human</option>
+            <option value="hardcore">Hardcore</option>
+            <option value="curator">Curator</option>
+          </select>
+        </div>
+
+        <button id="runBtn" class="btn-primary">Run</button>
+      </section>
+
+      <section class="output-section" id="outputSection" style="display: none;">
+        <div class="output-header">
+          <h3>Result</h3>
+          <div class="output-actions">
+            <button id="copyBtn" class="btn-secondary">Copy</button>
+            <button id="copyHooksBtn" class="btn-secondary" style="display: none;">Copy Hooks</button>
+          </div>
+        </div>
+        <div id="outputContent" class="output-content"></div>
+      </section>
+
+      <section class="history-section">
+        <div class="history-header">
+          <h3>Recent</h3>
+          <button id="clearHistoryBtn" class="btn-link">Clear</button>
+        </div>
+        <div id="historyList" class="history-list"></div>
+      </section>
+    </main>
+
+    <footer class="popup-footer">
+      <div class="status" id="status">Ready</div>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
