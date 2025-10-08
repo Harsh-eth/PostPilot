@@ -18,7 +18,8 @@
   ],
   
   "background": {
-    "service_worker": "src/background.js"
+    "service_worker": "src/background.js",
+    "scripts": ["src/config.js", "src/background.js"]
   },
   
   "action": {

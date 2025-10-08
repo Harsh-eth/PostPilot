@@ -1,11 +1,5 @@
-const EXTENSION_CONFIG = {
-  BACKEND_URL: 'http://127.0.0.1:8787',
-  API_KEY: 'fw_3Zd6KUHb3tiiUAXGRdLygqJv',
-  DEFAULT_PERSONA: 'human',
-  PRIVACY_STRIP_URLS: false,
-  PRIVACY_STRIP_MENTIONS: false,
-  DEBUG_MODE: false
-};
+// Import config from config.js
+importScripts('config.js');
 
 class PostPilotBackground {
   constructor() {

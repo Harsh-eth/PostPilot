@@ -1,6 +1,8 @@
+// Configuration for PostPilot Extension
+// Set your Fireworks API key here or use environment variables during build
 const EXTENSION_CONFIG = {
-  BACKEND_URL: 'http://127.0.0.1:8787', //this is default backend url
-  API_KEY: '', //enter firework api key here
+  BACKEND_URL: 'http://127.0.0.1:8787',
+  API_KEY: '', // Set your Fireworks API key here: 'fw_your_key_here'
   DEFAULT_PERSONA: 'human',
   PRIVACY_STRIP_URLS: false,
   PRIVACY_STRIP_MENTIONS: false,

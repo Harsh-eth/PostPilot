@@ -1,0 +1,16 @@
+{
+  "name": "postpilot",
+  "version": "1.0.0",
+  "description": "AI-powered X/Twitter post summarization and reply suggestions",
+  "scripts": {
+    "build": "node build-config.js",
+    "dev": "node build-config.js && echo 'Extension ready for development'",
+    "start": "cd server && python -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8787"
+  },
+  "devDependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "keywords": ["chrome-extension", "ai", "twitter", "summarization"],
+  "author": "Harsh",
+  "license": "MIT"
+}
